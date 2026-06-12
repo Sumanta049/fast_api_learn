@@ -1,0 +1,13 @@
+                                                     List of databases
+      Name      | Owner | Encoding | Locale Provider |  Collate   |   Ctype    | ICU Locale | ICU Rules | Access privileges 
+----------------+-------+----------+-----------------+------------+------------+------------+-----------+-------------------
+ DB1            | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | 
+ FAST_API_LEARN | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | 
+ postgres       | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | 
+ root           | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | 
+ template0      | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | =c/root          +
+                |       |          |                 |            |            |            |           | root=CTc/root
+ template1      | root  | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | =c/root          +
+                |       |          |                 |            |            |            |           | root=CTc/root
+(6 rows)
+
