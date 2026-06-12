@@ -27,19 +27,19 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     op.create_table(
-        'posts_alembic',
+        'post_new',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('title', sa.String, nullable=False),
         sa.Column('content', sa.String, nullable=False),
         sa.Column('published', sa.Boolean, nullable=False, server_default='true'),
         sa.Column('created_at', sa.DateTime, nullable=False, server_default=sa.func.now()),
-        #sa.Column('owner_id', sa.Integer, sa.ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
+        #sa.Column('owner_id', sa.Integer, nullable=False, foreign_key='users.id', ondelete='CASCADE')
     )
     pass
 
 
 def downgrade() -> None:
-    op.drop_table('posts_alembic')
+    op.drop_table('post_new')
     pass
 
 

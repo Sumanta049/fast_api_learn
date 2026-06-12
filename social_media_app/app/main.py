@@ -11,6 +11,7 @@ from .routers import posts, users, auth, votes
 
 from fastapi.middleware.cors import CORSMiddleware
 
+#database url from render: postgresql://root_fastapi:I8qJiEde0taqllGndEXS8lgVrfTcaBz1@dpg-d8m37jeq1p3s73a1agug-a/fast_api_learn_lri6
 
 app = FastAPI()
 

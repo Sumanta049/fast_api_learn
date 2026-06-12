@@ -19,20 +19,20 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    op.add_column('posts_alembic', sa.Column('user_id', sa.Integer(), nullable=True))
-    op.create_foreign_key('posts_users_fkey', 
-                          source_table='posts_alembic', 
-                          referent_table='users_alembic', 
-                          local_cols=['user_id'], 
-                          remote_cols=['id'], 
+    op.add_column('post_new', sa.Column('user_id', sa.Integer(), nullable=True))
+    op.create_foreign_key('posts_users_fkey',
+                          source_table='post_new',
+                          referent_table='users',
+                          local_cols=['user_id'],
+                          remote_cols=['id'],
                           ondelete='CASCADE'
                         )
     pass
 
 
 def downgrade() -> None:
-    op.drop_constraint('posts_users_fkey', 'posts_alembic', type_='foreignkey')
-    op.drop_column('posts_alembic', 'user_id')
+    op.drop_constraint('posts_users_fkey', 'post_new', type_='foreignkey')
+    op.drop_column('post_new', 'user_id')
     pass
 
 
