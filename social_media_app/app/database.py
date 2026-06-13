@@ -1,6 +1,6 @@
 #using orm instead of raw sql queries
 # sqlalchemy 
-from time import time
+import time
 from typing import Annotated
 
 from fastapi import Depends, FastAPI, HTTPException, Query
